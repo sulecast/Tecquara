@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <div id="google_translate_element" style="display: none;"></div>
+    <div class="container">
+
+        <!-- Barra de navegacion -->
+        <div class="navbar">
+            <div class="logo">
+              <img src="Components/Icons/TQ-blanco.jpeg" width="32px" height="32px" alt="">
+              <h1>Tecquara</h1>
+            </div>
+            <div class="menu">
+              <a href="#home" class="active">Home</a>
+              <a href="#about">Nosotros</a>
+              <a href="#skills">Tecnologías</a>
+              <a href="#projects">Proyectos</a>
+              <a href="#profiles">Perfiles</a>
+              <a href="#contacts">Contactos</a>
+              <div class="slide"></div>
+            </div>
+            <div class="icon">              
+              <a href='mailto:contacto@tuinstitucion.com?subject=Consulta&body=Hola, quisiera hacer una consulta...'; target="_blank">
+                <img src="Components/Icons/mensaje.png" alt="email" width="44" height="44">
+              </a>
+            </div>
+        </div>
+  
+        <!-- Barra Lateral de iconos -->
+        <div class="social-bar">
+            <a href="https://github.com" target="_blank" class="social-icon">
+              <img src="Components/Icons/github.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon">
+              <img src="Components/Icons/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+              <img src="Components/Icons/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <img src="Components/Icons/facebook.png" alt="Instagram">
+              </a>
+            <div class="line"></div>
+        </div>
+
+        <!-- Diseno vertical derecho -->
+        <div class="vertical-text">
+          PORTFOLIO
+        </div>
+      
+        
+        <!-- Secciones -->
+         <!-- Seccion1 Home -->
+        <div class="sections section1" id="home">
+          <div class="welcometext">
+            <h2>"Codificando el futuro, un proyecto a la vez."</h2>
+            <p>
+              En <span class="highlight">Techquara</span> transformamos ideas en soluciones de software innovadoras, diseñadas para impulsar tu negocio y superar desafíos. Nos apasiona crear experiencias digitales únicas que optimizan procesos y elevan tu potencial. Explora nuestro portafolio y descubre cómo hacemos realidad tu visión.
+            </p>
+            <button class="emailbtn" onclick="window.location.href='mailto:contacto@tuinstitucion.com?subject=Consulta&body=Hola, quisiera hacer una consulta...';">Email us</button>
+          </div> 
+          <div class="img-container">
+            <img src="Components/Icons/Robot3D.gif" alt="Animated Robot">
+            <div class="tex-img">
+              <div>
+                <h3>"Las soluciones tecnológicas no solo resuelven problemas, transforman vidas. Cada innovación que construyes es un paso hacia un futuro más inteligente, conectado y lleno de posibilidades." 🌐✨</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seccion2 acerca de -->
+        <div class="sections section2" id="about">
+            <h1>Acerca de</h1>
+        </div>
+        <div class="sections section3" id="skills">
+            <h1>Tecnologías y herramientas </h1>
+        </div>
+        <div class="sections section4" id="projects">
+            <h1>Proyectos</h1>
+        </div>
+        <div class="sections section5" id="profiles">
+            <h1>Equipo o perfiles</h1>
+        </div>
+        <div class="sections section6" id="contacts">
+            <h1>Contactos</h1>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
