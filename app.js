@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configurar IntersectionObserver
     const observerOptions = {
         root: null,
-        threshold: 0.5, // Detectar si al menos el 50% de la sección está visible
+        threshold: 0.5,
     };
 
     const observerCallback = (entries) => {
@@ -64,3 +64,25 @@ document.addEventListener('DOMContentLoaded', () => {
     activeLink.classList.add('active');
     updateIndicator(activeLink);
 });
+
+
+// Controlar el desplazamiento del carrusel de los proyectos
+const cardsContainer = document.querySelector('.cardscontainer'); 
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let currentIndex = 0;
+
+prevBtn.addEventListener('click', () => {
+  const cardWidth = document.querySelector('.cards').offsetWidth + 20;
+  currentIndex = Math.max(currentIndex - 1, 0);
+  cardsContainer.scrollLeft -= cardWidth; 
+});
+
+nextBtn.addEventListener('click', () => {
+  const cardWidth = document.querySelector('.cards').offsetWidth + 20; 
+  const maxScrollLeft = cardsContainer.scrollWidth - cardsContainer.clientWidth; 
+  currentIndex = Math.min(currentIndex + 1, maxScrollLeft / cardWidth);
+  cardsContainer.scrollLeft += cardWidth;
+});
+
