@@ -1,0 +1,718 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh; 
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+ }
+
+/* Barra de navegación */
+.navbar {
+    background-color: #050A1A;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 68px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar .logo {
+    display: flex;
+    flex: 1; 
+    gap: 5px;
+  }
+
+  .logo img{
+    border-radius: 10px;
+  }
+  
+  
+  .navbar .icon {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon a {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Efecto hover en el ícono */
+.icon a:hover {
+  transform: scale(1.2); 
+  filter: brightness(1.2); 
+  cursor: pointer;
+}
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif, cursive; 
+    padding: 14px 20px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .logo h1{
+    color: #D5297D;
+  }
+  
+  .menu {
+    display: flex;
+    position: relative;
+}
+
+.menu a {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.menu .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: #D5297D;
+    border-radius: 8px;
+    z-index: 0;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+}
+
+.menu a.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #D5297D; 
+    font-weight: bold;
+}
+
+.menu a:nth-child(1).active ~ .slide {
+    transform: translateX(0);
+    width: 80px;
+}
+
+.menu a:nth-child(2).active ~ .slide {
+    transform: translateX(100px);
+    width: 120px; 
+}
+
+.menu a:nth-child(3).active ~ .slide {
+    transform: translateX(220px);
+    width: 150px;
+}
+
+.menu a:nth-child(4).active ~ .slide {
+    transform: translateX(370px);
+    width: 120px;
+}
+
+.menu a:nth-child(5).active ~ .slide {
+    transform: translateX(490px);
+    width: 100px;
+}
+
+.menu a:nth-child(6).active ~ .slide {
+    transform: translateX(590px);
+    width: 110px;
+}
+
+/* Secciones */
+.sections{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    scroll-snap-align: start;
+}
+
+/* Estilos del home, seccion1 */
+.sections h1{
+    color: #D5297D;
+}
+
+.section1{
+  background-color: #050A1A;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcometext {
+  width: 70%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 130px;
+}
+
+.welcometext p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  animation: slideInLeft 1.5s ease-out forwards;
+}
+
+/* Definición de la animación */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); 
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.welcometext h2{
+  margin: 20px;
+  font-size: 40px;
+  color: white;
+}
+
+.welcometext .highlight {
+  font-size: 24px;
+  font-weight: bold;
+  color: #D5297D;
+}
+
+.emailbtn {
+  margin-top: 40px;
+  background-color: #D5297D; 
+  color: #050A1A;
+  font-size: 16px; 
+  font-weight: bold; 
+  padding: 12px 20px; 
+  border: none; 
+  border-radius: 8px;
+  cursor: pointer;
+  animation: bounce 1s infinite;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.emailbtn:hover {
+  background-color: #C2185B;
+  transform: scale(1.1); 
+  animation: none;
+}
+
+.emailbtn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.emailbtn:active {
+  background-color: #9C1C48;
+  transform: scale(1);
+}
+
+.img-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  overflow: hidden;
+  width: 60%;
+  margin-bottom: 40px;
+}
+
+.img-container img {
+  width: 34%;
+  height: auto;
+  border-radius: 90px;
+  background-color: #050A1A;
+}
+
+.tex-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tex-img h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+
+/* Estilos de la seccion2 */
+.section2{background-color: #050A1A;}
+.section3{background-color: #8ecae6;}
+
+/*Estilos de la seccion 3 "Tecnologias" */
+.section3{background: linear-gradient(#080F28, #080F28, #03045e)}
+
+.sections.section3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+  padding: 40px 80px;
+}
+
+.tecnologias-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.tecnologias-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.descripcion {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.botones {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid #D5297D;
+  background-color: transparent;
+  color: #D5297D;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn.activo {
+  background-color: #D5297D;
+  color: white;
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Estilo de la seccion 4 "Proyectos" */
+.section4{background: linear-gradient(#080F28, #080F28, #03045e)}
+
+.cardscontainer {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+  max-width: 1100px;
+  margin-top: 70px;
+}
+
+.cardscontainer::-webkit-scrollbar {
+  display: none;
+}
+.cardscontainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cards {
+  flex: 0 0 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: justify;
+  margin: 10px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+}
+
+.project-buttons a {
+  width: 32px;
+  height: 32px;
+}
+
+.project-buttons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.project-buttons img:hover {
+  transform: scale(1.2);
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-inline: 60px;
+}
+
+.carousel-buttons img {
+  width: 50px;
+  height: 50px;
+}
+
+.bbk:hover {
+  transform: scale(1.1) rotate(-20deg);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bfd:hover {
+  transform: scale(1.1) rotate(20deg);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estilos de la seccion 5 "Perfiles" */
+.section5{background-color: #050A1A;}
+
+.section5 h1 {
+  color: #fff;
+}
+
+.profiles-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 80%;
+  height: auto;
+  background-color: #050A1A;
+  padding: 20px;
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.social-icons {
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.left-side-profile,
+.right-side-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 15px; 
+  border-radius: 10px;
+  background-color: #30638e; 
+  width: 40%; 
+  text-align: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.left-side-profile:hover,
+.right-side-profile:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.left-side-profile h3,
+.right-side-profile h3 {
+  color: #fff;
+  margin: 10px 0 5px; 
+  font-size: 1.5rem; 
+}
+
+.left-side-profile h5,
+.right-side-profile h5 {
+  color: #e0e0e0;
+  margin: 5px 0; 
+  font-size: 1rem;
+  font-weight: 300; 
+}
+
+.left-side-profile p,
+.right-side-profile p {
+  color: #000;
+  margin: 5px 0; 
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify; 
+}
+
+.left-side-profile img,
+.right-side-profile img {
+  width: 40px;
+  height: 40px;
+}
+
+.left-side-profile img:hover,
+.right-side-profile img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.left-side-profile .avatar,
+.right-side-profile .avatar {
+  width: 120px; 
+  height: 120px;
+  border-radius: 50%; 
+  margin-bottom: 10px; 
+  border: 3px solid #fff; 
+}
+
+@media (max-width: 768px) {
+  .profiles-container {
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .left-side-profile,
+  .right-side-profile {
+    width: 80%;
+  }
+}
+
+
+/* Estilos de seccion 6 "Contactos" */
+.section6{
+  background-color: #023047;
+}
+
+#contacts h1 {
+  font-size: 2.1em;
+  color: #f4f4f4;
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  max-width: 70%;
+}
+
+.contact-info-left, .contact-info-right {
+  flex: 1;
+  padding: 20px;
+  max-width: 48%;
+}
+
+.contact-info-left {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.contact-info-right {
+  text-align: left;
+}
+
+.contact-info-left p, .contact-info-right p {
+  font-size: 1.1em;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.contact-info-left a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info-left a:hover {
+  text-decoration: underline;
+}
+
+.contact-info-left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info-left li {
+  margin: 5px 0;
+}
+
+.contact-info-left li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info-left li a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+  border-radius: 20px;
+}
+
+.contact-info-right h3 {
+  font-size: 1.8em;
+  color: #D5297D;
+}
+
+.contact-info-right p {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+
+/* Barra lateral de iconos */
+.social-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    animation: slide-up 1s ease-out forwards;
+  }
+
+  @keyframes slide-up {
+    0% {
+      bottom: -100px;
+      opacity: 0; 
+    }
+    100% {
+      bottom: 0; 
+      opacity: 1; 
+    }
+  }
+  
+  /* Estilo de los íconos */
+  .social-icon img {
+    width: 32px;
+    height: 32px;
+    color: #2AD682;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .social-icon:hover img {
+    transform: scale(1.2); 
+    opacity: 0.8;
+  }
+  
+  /* Línea decorativa */
+  .line {
+    width: 3px;
+    height: 80px;
+    background-color: #D5297D;
+    margin-top: 10px;
+  }
+  
+
+  /* Texto vertical derecho */
+  .vertical-text {
+    position: fixed;
+    right: 80px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    writing-mode: vertical-lr; 
+    text-orientation: upright;
+    font-size: 28px; 
+    font-weight: bold;
+    color: #D5297D;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-align: center;
+    z-index: 1000;
+    height: 50%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 35px #D5297D;
+    background-color: #1b263b;
+    animation: slide-down 1s ease-out forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    top: -100px;
+    opacity: 0; 
+  }
+  100% {
+    top: 50; 
+    opacity: 1; 
+  }
+}

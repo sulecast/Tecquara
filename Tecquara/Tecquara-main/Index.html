@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="google_translate_element" style="display: none;"></div>
+  <div class="container">
+
+    <!-- Barra de navegacion -->
+    <div class="navbar">
+      <div class="logo">
+        <img src="Components/Icons/TQ-blanco.jpeg" width="32px" height="32px" alt="">
+        <h1>Tecquara</h1>
+      </div>
+      <div class="menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">Nosotros</a>
+        <a href="#skills">Tecnologías</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#profiles">Perfiles</a>
+        <a href="#contacts">Contactos</a>
+        <div class="slide"></div>
+      </div>
+      <div class="icon">
+        <a href='mailto:contacto@tuinstitucion.com?subject=Consulta&body=Hola, quisiera hacer una consulta...' ;
+          target="_blank">
+          <img src="Components/Icons/mensaje.png" alt="email" width="44" height="44">
+        </a>
+      </div>
+    </div>
+
+    <!-- Barra Lateral de iconos -->
+    <div class="social-bar">
+      <a href="https://github.com" target="_blank" class="social-icon">
+        <img src="Components/Icons/github.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="social-icon">
+        <img src="Components/Icons/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://instagram.com" target="_blank" class="social-icon">
+        <img src="Components/Icons/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com" target="_blank" class="social-icon">
+        <img src="Components/Icons/facebook.png" alt="Instagram">
+      </a>
+      <div class="line"></div>
+    </div>
+
+    <!-- Diseno vertical derecho -->
+    <div class="vertical-text">
+      PORTFOLIO
+    </div>
+
+
+    <!-- Secciones -->
+    <!-- Seccion1 Home -->
+    <div class="sections section1" id="home">
+      <div class="welcometext">
+        <h2>"Codificando el futuro, un proyecto a la vez."</h2>
+        <p>
+          En <span class="highlight">Techquara</span> transformamos ideas en soluciones de software innovadoras,
+          diseñadas para impulsar tu negocio y superar desafíos. Nos apasiona crear experiencias digitales únicas que
+          optimizan procesos y elevan tu potencial. Explora nuestro portafolio y descubre cómo hacemos realidad tu
+          visión.
+        </p>
+        <button class="emailbtn"
+          onclick="window.location.href='mailto:contacto@tuinstitucion.com?subject=Consulta&body=Hola, quisiera hacer una consulta...';">Email
+          us</button>
+      </div>
+      <div class="img-container">
+        <img src="Components/Icons/Robot3D.gif" alt="Animated Robot">
+        <div class="tex-img">
+          <div>
+            <h3>"Las soluciones tecnológicas no solo resuelven problemas, transforman vidas. Cada innovación que
+              construyes es un paso hacia un futuro más inteligente, conectado y lleno de posibilidades." 🌐✨</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seccion2 acerca de -->
+    <div class="sections section2" id="about">
+      <h1>Acerca de</h1>
+    </div>
+
+    <!-- Seccion de tecnologias - tecnologias-container --> 
+    <div class="sections section3" id="skills">
+      <div class="tecnologias-left">
+        <p class="descripcion">
+          Somos un equipo de desarrollo con experiencia en tecnologías clave como HTML, CSS, JavaScript, C# y Java, que nos permiten abordar proyectos web de forma integral. Trabajamos con frameworks modernos como React JS, Vue JS, Blazor, Node JS, Express JS, ASP.NET MVC y .NET Core con Entity Framework, asegurando soluciones eficientes tanto en el frontend como en el backend.
+
+En el desarrollo móvil, utilizamos Flutter, Xamarin Forms y React Native para construir aplicaciones multiplataforma, centradas en la experiencia del usuario y el rendimiento.
+
+Manejamos diversas bases de datos, incluyendo SQL Server, PostgreSQL y MySQL, garantizando estructuras sólidas y un acceso eficiente a la información.
+
+Nuestro flujo de trabajo se apoya en herramientas como Visual Studio Code, Visual Studio Community y SQL Server Management Studio, permitiéndonos colaborar de forma ágil, mantener buenas prácticas de desarrollo y lograr entregas de calidad.
+        </p>
+        <div class="botones">
+          <button id="btn-tecnologias" class="btn activo">Tecnologías y Frameworks</button>
+          <button id="btn-herramientas" class="btn">Herramientas</button>
+        </div>
+      </div>
+      
+      <div class="tecnologias-right">
+        <div id="tecnologias" class="icons-container">
+          <!-- Ejemplo de tecnologías/frameworks -->
+          <img src="Components/Icons/html5.png" alt="HTML" class="icon">
+          <img src="Components/Icons/css.png" alt="CSS" class="icon">
+          <img src="Components/Icons/javascript.png" alt="JavaScript" class="icon">
+          <img src="Components/Icons/csharp.png" alt="C#" class="icon">
+          <img src="Components/Icons/java.png" alt="Java" class="icon">
+          <img src="Components/Icons/mysql.png" alt="MySQL" class="icon">
+        </div>
+    
+        <div id="herramientas" class="icons-container" style="display: none;">
+          <!-- Ejemplo de herramientas -->
+          <img src="Components/Icons/vscode.png" alt="VS Code" class="icon">
+          <img src="Components/Icons/vsc.png" alt="VS Community" class="icon">
+          <img src="Components/Icons/SSMS.png" alt="SQL Management Studio" class="icon">
+          <img src="Components/Icons/git.png" alt="GitHub" class="icon">
+        </div>
+      </div>
+    </div>
+
+    <!-- Seccion de proyectos -->
+    <div class="sections section4" id="projects">
+      <div class="cardscontainer">
+        <div class="cards">
+          <img src="Components/Proyectos/Pokedex.png" alt="Pokedex" class="project-image">
+          <h3>Pokedex</h3>
+          <p class="project-description">Este proyecto es una Pokédex creada con HTML, CSS y JavaScript, permite
+            explorar y conocer todo sobre los Pokémon. Los usuarios pueden buscar sus Pokémon favoritos y ver detalles
+            como estadísticas, habilidades y evoluciones. Además, incluye datos sobre tipos y debilidades.</p>
+          <div class="project-buttons">
+            <a href="https://github.com/Luis-Pichardo/Pokedex" class="github-link">
+              <img src="Components/Icons/github.png" alt="Github">
+            </a>
+            <a href="https://pokedex-five-puce.vercel.app/" class="view-link">
+              <img src="Components/Icons/view.png" alt="Ver">
+            </a>
+          </div>
+        </div>
+        <!-- Copia y pega más tarjetas aquí para más proyectos -->
+        <div class="cards">
+          <img src="Components/Proyectos/NetlawSGL.png" alt="NetLaw SGL" class="project-image">
+          <h3>NetLaw SGL</h3>
+          <p class="project-description">El Sistema de Gestión Legal es una plataforma diseñada para bufetes y
+            profesionales del derecho. Ofrece una solución integral para gestionar casos, clientes, documentos y
+            calendarios, ayudando a optimizar operaciones y brindar un servicio eficiente y de calidad.</p>
+          <div class="project-buttons">
+            <a href="#" class="github-link">
+              <img src="Components/Icons/github.png" alt="Github">
+            </a>
+            <a href="#" class="view-link">
+              <img src="Components/Icons/view.png" alt="Ver">
+            </a>
+          </div>
+        </div>
+
+        <div class="cards">
+          <img src="Components/Proyectos/NetlawSGL-API.png" alt="Proyecto 2" class="project-image">
+          <h3>NetLaw SGL API</h3>
+          <p class="project-description">La API del Sistema de Gestión Legal permite a bufetes y abogados gestionar
+            datos desde la web. Ofrece endpoints para casos, clientes, documentos y calendarios, optimizando procesos
+            legales con seguridad, eficiencia y acceso rápido a información clave. </p>
+          <div class="project-buttons">
+            <a href="#" class="github-link">
+              <img src="Components/Icons/github.png" alt="Github">
+            </a>
+            <a href="#" class="view-link">
+              <img src="Components/Icons/view.png" alt="Ver">
+            </a>
+          </div>
+        </div>
+
+        <div class="cards">
+          <img src="Components/Proyectos/Tecquara.png" alt="Techquara" class="project-image">
+          <h3>Techquara</h3>
+          <p class="project-description">En Techquara, transformamos ideas en soluciones de software innovadoras que
+            impulsan negocios y superan desafíos. Creamos experiencias digitales únicas, optimizando procesos y
+            maximizando el potencial de cada proyecto, conectando a las personas con un futuro lleno de posibilidades.
+          </p>
+          <div class="project-buttons">
+            <a href="#" class="github-link">
+              <img src="Components/Icons/github.png" alt="Github">
+            </a>
+            <a href="#" class="view-link">
+              <img src="Components/Icons/view.png" alt="Ver">
+            </a>
+          </div>
+        </div>
+
+        <div class="cards">
+          <img src="Components/Proyectos/Proyecto2.png" alt="Proyecto 2" class="project-image">
+          <h3>Pokedex</h3>
+          <p class="project-description">Descripción del Proyecto 2</p>
+          <div class="project-buttons">
+            <a href="#" class="github-link">
+              <img src="Components/Icons/github.png" alt="Github">
+            </a>
+            <a href="#" class="view-link">
+              <img src="Components/Icons/view.png" alt="Ver">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button id="prevBtn">
+          <img class="bbk" src="Components/Icons/backward.png" alt="Izquierda">
+        </button>
+        <button id="nextBtn">
+          <img class="bfd" src="Components/Icons/forward.png" alt="Derecha">
+        </button>
+      </div>
+    </div>
+
+    <!-- Equipo o perfil -->
+    <div class="sections section5" id="profiles">
+      <h1>Perfiles</h1>
+      <div class="profiles-container">
+        <div class="left-side-profile">
+          <img class="avatar" src="Components/Icons/Avatar-luis.png" alt="Avatar">
+          <h3>Luis Pichardo</h3>
+          <h5>FullStack Developer (Robust Backend)</h5>
+          <p>Luis Pichardo, Full Stack Developer especializado en backend robusto, domina C#, .NET, Blazor, SQL Server y API RestFul. Certificado en Scrum, con inglés avanzado y formación en ITLA, destaca por crear soluciones escalables y eficientes con enfoque ágil.</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/luis-pichardo-3a6944311" target="_blank"><img src="Components/Icons/linkedin-negro.png" alt="LinkedIn"></a>
+            <a href="https://github.com/Luis-Pichardo" target="_blank"><img src="Components/Icons/github-negro.png" alt="GitHub"></a>
+          </div>
+          
+        </div>
+
+        <div class="right-side-profile">
+          <img class="avatar" src="Components/Icons/Avatar-luis.png" alt="Avatar">
+          <h3>Suleika Mercedes</h3>
+          <h5>FullStack Developer (Robust Backend)</h5>
+          <p>Suleika Mercedes, Full Stack Developer especializado en backend robusto, domina C#, .NET, Blazor, SQL Server y API RestFul. Certificado en Scrum, con inglés avanzado y formación en ITLA, destaca por crear soluciones escalables y eficientes con enfoque ágil.</p>
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/suleika" target="_blank"><img src="Components/Icons/linkedin-negro.png" alt="LinkedIn"></a>
+            <a href="https://github.com/suleika" target="_blank"><img src="Components/Icons/github-negro.png" alt="GitHub"></a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Contactos -->
+    <div class="sections section6" id="contacts">
+      <h1>Contactos</h1>
+
+      <div class="contact-info-container">
+        <div class="contact-info-left">
+          <p><strong>Email:</strong> <a href="mailto:info@techquara.com">info@techquara.com</a></p>
+          <p><strong>Teléfonos:</strong></p>
+          <ul>
+            <li><a href="tel:+18096515365">+1 809-651-5365</a></li>
+            <li><a href="tel:+18297510360">+1 829-751-0360</a></li>
+          </ul>
+          <p><strong>Ubicación:</strong> República Dominicana, San Pedro de Macorís</p>
+        </div>
+
+        <div class="contact-info-right">
+          <h3>Explora nuestras soluciones</h3>
+          <p>En Techquara, nuestra misión es impulsar tu negocio y superar cualquier desafío con soluciones innovadoras.
+          </p>
+          <p>"Las soluciones tecnológicas no solo resuelven problemas, transforman vidas. Cada innovación que construyes
+            es un paso hacia un futuro más inteligente, conectado y lleno de posibilidades." 🌐✨</p>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>&copy; 2025 Techquara. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
